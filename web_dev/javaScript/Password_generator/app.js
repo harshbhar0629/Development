@@ -98,7 +98,7 @@ function setColorStrength() {
         setIndicator("#ff0");
     }
     else if ((hasSym == true || hasNum == true) || (hasLower == true || hasUpper == true)){
-        // easy
+        // easy if any attributes is not checked we can't generate any password
         setIndicator("#f00");
     }
 }
