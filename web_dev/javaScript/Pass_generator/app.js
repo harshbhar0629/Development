@@ -97,7 +97,7 @@ function setColorStrength() {
         // moderate
         setIndicator("#ff0");
     }
-    else if ((hasSym == true || hasNum == true) || (hasLower == true || hasUpper == true)){
+    else if ((hasSym == true || hasNum == true) || (hasLower == true || hasUpper == true)) {
         // easy if any attributes is not checked we can't generate any password
         setIndicator("#f00");
     }
