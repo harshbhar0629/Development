@@ -1,0 +1,29 @@
+div{
+    color: pink;
+    background-color: orange;
+    width: 250px;
+    height: 250px;
+    background-image: url(leaves.png);
+    background-size: cover;     
+}
+
+
+/* div{
+    background-color: orange;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    transition: margin 2s ease-in 1s; 
+    transition: 1s 2s;
+    transition-duration: 2s;
+    transition-delay: 1s ; 
+    
+}
+ */
+
+/* div:hover{
+    background-color: pink;
+    margin-top: 200px;
+    margin-right: 600px;
+} */
+

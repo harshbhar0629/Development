@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+}
+
+.container1{
+    height: 100%;
+    position: relative;
+    display: flex;
+    transform-style: preserve-3d;
+    align-items: center;
+    /* align-content: flex-end; */
+    justify-content: center;
+    z-index: -1;
+    transition: step-start;
+}
+
+h1{
+    text-align: center;
+    font-size: 8rem;
+    letter-spacing: 2px;
+    color: rgb(204, 227, 236);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /* letter-spacing: 4px; */
+    top: 50px;
+    left: 50%;
+    /* margin-bottom: 350px; */
+}
+
+.background{
+    transform: translateZ(-45px) scale(6);
+}
+
+.foreground{
+    transform: translateZ(-20px) scale(3);
+}
+
+.background, .foreground{
+    transition: step-start;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+section{
+    padding: 5rem 0;
+    background-color: rgb(46, 44, 44);
+    color: white;
+}
+
+h2{
+    text-align: center;
+    /* text-decoration-line: underline; */
+    padding: 0 7rem;
+    font-size: 6rem;
+    top: 150px;
+}
+
+.text{
+    font-size: 1.5rem;
+    padding: 50px;
+    margin: 0px auto;
+    height: 400px;
+    width: 100%;
+}
+
+.bg{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg1{
+    background-image: url(biking.jpg);
+}
+
+.bg2{
+    background-image: url(paragliding3.png);
+    /* transform: scaleX(1.1); */
+}
+
+.bg3{
+    background-image: url(surfing3.png);
+}
+
+.desc{
+    /* position: absolute; */
+    font-size: 10rem;
+    margin-top: 100px;
+}

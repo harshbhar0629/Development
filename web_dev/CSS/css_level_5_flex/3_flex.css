@@ -1,0 +1,16 @@
+.container{
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    display: flex;
+    border-radius: 5%;
+    background-color: antiquewhite;
+}
+
+.child{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin: 50px;
+}

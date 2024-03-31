@@ -1,0 +1,27 @@
+*{
+    text-align: center;
+}
+
+
+.container{
+    padding: 20px;
+    background-color: rebeccapurple;
+    height: 600px;
+    width: 600px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 100px 100px ;
+    grid-template-rows: 200px 200px 200px;
+   
+   
+
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: blueviolet;
+    box-sizing: border-box;
+    border: 1px solid white;
+}
+

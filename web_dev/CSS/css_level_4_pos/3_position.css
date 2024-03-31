@@ -1,0 +1,112 @@
+*:hover{
+    background-color: rgb(26, 204, 94);
+}
+
+.face{
+    width: 400px;
+    height: 400px;
+    background-color: orange;
+    border-radius: 50%;
+    transition-delay: 0.5s;
+}
+
+.face:hover{
+    width: 400px;
+    height: 400px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.face:active{
+    width: 400px;
+    height: 400px;
+    background-color: #8b008b;
+    border-radius: 50%;
+}
+
+
+.mouth{
+    background-color: red;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 250px;
+    border-radius: 0 0 50px 50px;
+    left: 150px;
+}
+
+.mouth:hover{
+    background-color: lightsalmon;
+}
+
+.nose{
+    background-color: black;
+    height: 90px;
+    position: absolute;
+    top: 150px;
+    left: 195px;
+    border-radius: 50%;
+    width: 10px;
+}
+
+.left-eye, .right-eye{
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    display: inline-block;
+    position: absolute;
+    top: 90px;
+    border-radius: 50%;
+    left: 100px;
+}
+
+.nose:hover{
+    background-color: aqua;
+}
+
+.left-eye:hover{
+    background-color: rgb(255, 127, 138);
+    
+}
+.right-eye:hover{
+    background-color: rgb(255, 127, 138);
+}
+
+.right-eye{
+    left: 250px;
+}
+
+/* div{
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+    border: 3px solid black;
+    margin: 10px;
+    display: inline-block;
+} */
+
+/* .static{
+    background-color: yellow;
+    position: static;
+    top: 100px;
+    left: 100px;
+}
+
+.relative{
+    background-color: yellow;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+.absolute{
+    background-color: yellow;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+} */
+/* .fixed{
+    background-color: yellow;
+    position: fixed;
+    top: 100px;
+    left: 100px;
+} */

@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main_box{
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-image: url("photo.jpg");
+}
+
+.btn_one{
+    position: absolute;
+    left: 26px;
+    color: white;
+    font-size: 3rem;
+}
+
+.sidebar_menu{
+    position: fixed;
+    /* left: -360px; */
+    height: 100vh;
+    width: 20%;
+    background-color: white;
+}

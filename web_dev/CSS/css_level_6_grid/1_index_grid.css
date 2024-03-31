@@ -1,0 +1,32 @@
+.container{
+    height: 500px;
+    width: 600px;
+    background-color: aquamarine;
+    display: grid;
+    gap: 5px;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-columns: 100px 1fr 1fr 100px;
+}
+
+.items{
+    text-align: center;
+    background-color: orange;
+    box-sizing: border-box;
+    border: 2px solid black;
+    
+}   
+
+#box1{
+    height: 50px;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+#box3{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+#box5{
+    height: 50px;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}

@@ -1,0 +1,101 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<form action="/server">
+			<input
+				type="checkbox"
+				name="age"
+				id="age"
+				checked />
+			<label for="age">I'm 18+</label>
+			<hr />
+
+			<div>
+				<input
+					type="radio"
+					name="fruit"
+					id="apple" />
+				<label for="apple">apple</label>
+				<input
+					type="radio"
+					name="fruit"
+					id="mango" />
+				<label for="mango">mango</label>
+				<input
+					type="radio"
+					name="fruit"
+					id="banana" />
+				<label for="banana">banana</label>
+			</div>
+			<hr />
+			<div>
+				choose subjects:
+				<input
+					type="checkbox"
+					name="subject"
+					id="maths"
+					value="maths" />
+				<label for="maths">maths</label>
+				<input
+					type="checkbox"
+					name="subject"
+					id="science"
+					value="science" />
+				<label for="science">science</label>
+				<input
+					type="checkbox"
+					name="subject"
+					id="english"
+					value="english" />
+				<label for="english">english</label>
+			</div>
+			<hr />
+			<div>
+				select your profession
+				<select
+					name="profession"
+					id="profession">
+					<option value="">select your option</option>
+					<option value="dev">developer</option>
+					<option value="stu">Student</option>
+					<option value="dataSci">data science</option>
+				</select>
+			</div>
+			<hr />
+			<div>
+				select your volume
+				<input
+					type="range"
+					name="vol"
+					id="volume"
+					min="0"
+					max="100" />
+				<label for="volume">volume</label>
+				<!-- age=on&profession=&vol=22 -->
+			</div>
+			<hr />
+			<div>
+				<label for="feedback">please give your valuable feedback</label>
+				<textarea
+					name="feedback"
+					id="feedback"
+					placeholder="Enter feedback"
+					rows="5"
+					cols="20"></textarea>
+				<!-- age=on&profession=&vol=50&feedback= 
+                age=on&profession=&vol=50&feedback=you%27re+great+teacher-->
+			</div>
+			<hr />
+			<button>submit</button>
+		</form>
+	</body>
+</html>

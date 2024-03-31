@@ -1,0 +1,14 @@
+h2{
+    color: rgb(0, 47, 255);
+}
+#btn{
+    background-color: aqua;
+    color: black;
+}
+*{
+    font-family: 'Courier New';
+}
+#search{
+    background-color: black;
+    color: white;
+}

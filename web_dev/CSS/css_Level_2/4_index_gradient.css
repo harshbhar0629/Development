@@ -1,0 +1,53 @@
+
+#scale{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    background-color: aqua;
+    margin-top: 30px;
+    margin-left: 100px;
+    transform: perspective(1px) scaleZ(1) rotateX(15deg) rotateY(15deg);    
+}
+
+
+.div2{
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    /* background-image: linear-gradient(white, rgba(128, 128, 128, 0.644), rgba(0, 0, 255, 0.616), rgba(255, 255, 0, 0.979), red,red); */
+    background-image: radial-gradient(red, orange, yellow, green);
+    text-align: center;
+
+}
+
+div{
+    display: inline-block;
+}
+
+.div1{
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    background-image: linear-gradient(white, rgba(128, 128, 128, 0.644), rgba(0, 0, 255, 0.616), rgba(255, 255, 0, 0.979), red,red);
+    /* background-image: radial-gradient(red, orange, yellow, green); */
+    text-align: center;
+}
+
+.div3{
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    background-image: conic-gradient(from 180deg,red, orange, yellow, green, blue);
+    /* background-image:  conic-gradient(180deg,red 0deg, orange 90deg, yellow 180deg, green 270deg, blue 360deg); */
+    background-image: conic-gradient(from 45deg, red , orange, yellow, pink,aqua, violet, white);
+}
+
+.d{
+    box-shadow: 10px 10px;
+    /* border: 1px solid red; */
+    /* text-shadow: -1px -1px; */
+    background-color: white;
+    height: 100px;
+    width: 100px;
+}

@@ -1,0 +1,81 @@
+li{
+    display: inline;
+}
+/* Bullet points or list style icons works only for display: list-item 
+applied elements. This property is applied by default to the li element,
+which you are overriding now by applyineg display: inline-block. 
+Hence, the list style icons will be gone */
+
+
+/* div{
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: inline-block;
+} */
+
+
+
+/* div{
+    height: 150px;
+    width: 300px;
+    border: 5px solid black;
+    border-style: dotted;
+    background-color: grey;
+    margin-top: 20px;
+    margin-right: 1em;
+    margin-bottom: 40px;
+    margin-left: 2em;
+    padding: 1em;
+} */
+
+
+
+
+/* #outer_div{
+    border: 1px solid black;
+    width: 80px;
+    height: 200px;
+}
+
+.inner{
+    border: 1px solid black;
+    height: 50px;
+    border-radius: 100%;
+    margin: 10px;
+}
+#red{
+    background-color: red;
+}
+#yellow{
+    background-color: yellow;
+}
+#green{
+    background-color: green;
+}
+div{
+    margin: 10px;
+    border: 1px solid black;
+    background-color: yellowgreen;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+.outer{
+    border: 1px solid black;
+    height: 400px;
+    width: 400px;
+    background-color: lightgreen;
+    margin: 100px;
+}
+.inner{
+    border: 2px solid black;
+    height: 100px;
+    width: 100px;
+    background-color: lightyellow;
+    margin: 10%;
+    
+} */

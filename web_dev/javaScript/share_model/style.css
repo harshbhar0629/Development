@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+
+.circle1 {
+    position: fixed;
+    top: 2%;
+    left: 26%;
+    width: 11em;
+    height: 11em;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #d84869;
+    background: linear-gradient(-25deg, #d84869,
+            #f46641);
+    animation: circleAnimate 15s infinite;
+}
+
+@keyframes circleAnimate {
+    50% {
+        left: 30%;
+        top: 3%;
+        scale: 1.11;
+    }
+}
+
+.circle2 {
+    position: absolute;
+    bottom: 3%;
+    right: 22%;
+    width: 16em;
+    height: 16em;
+    border-radius: 50%;
+    scale: .90;
+    box-shadow: 0 0 50px #5648d8;
+    background: linear-gradient(-25deg, #5648d8, #8641f4);
+    animation: circle2Animate 10s infinite;
+}
+
+@keyframes circle2Animate {
+    50% {
+        scale: 1.01;
+        bottom: 4%;
+        right: 26%;
+    }
+}
+
+.card-wrapper {
+    height: 450px;
+    width: 340px;
+    border: 2px solid #ffffff30;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #ffffff1a;
+    border-radius: 15px;
+    pad: 20px 50px;
+    color: #ffffff;
+}
+
+.card-wrapper div img {
+    border: 2px solid #ffffff30;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.user-name h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.about h3 {
+    text-align: center;
+    color: #ffffff85;
+}
+
+.btn-gp {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.btn-share {
+    font-size: 15px;
+    display: flex;
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 12px;
+    background: #ffffff00;
+    border: 2px solid #ffffffb9;
+    text-transform: capitalize;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #ffffffb9;
+    transition: all 0.5s;
+}
+
+.btn-follow {
+    font-size: 15px;
+    width: 150px;
+    padding: 9px 12px;
+    background: #ffffff00;
+    border: 2px solid #ffffffb9;
+    text-transform: capitalize;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #ffffffb9;
+    transition: all 0.5s;
+}
+
+.btn:hover {
+    background: #ffffffb9;
+    color: black;
+}
+
+.change{
+    background-color: rgb(0, 149, 246);
+    color: white;
+}
+
+.change:hover {
+    background-color: rgb(0, 149, 246);
+    color: black;
+}
+
+/* hidden content  */
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border: 2px solid #ffffff59;
+    width: 400px;
+    scale: 0;
+    background-color: #00000088;
+    backdrop-filter: blur(10px);
+    color: white;
+    z-index: 1;
+    padding: 20px 25px;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.header-modal {
+    display: flex;
+    margin-bottom: 25px;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ffffff88;
+}
+
+.header-modal div i {
+    font-size: 30px;
+}
+
+.close {
+    cursor: pointer;
+}
+
+.icon-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.icon {
+    border: 1px solid #ffffff88;
+    padding: 17px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+    gap: 10px;
+    justify-content: center;
+    transition: all 0.5s;
+    margin-bottom: 25px;
+    text-decoration: none;
+
+}
+
+.icon i {
+    font-size: 27px;
+}
+
+#facebook {
+    color: #1771e6;
+    border: 1px solid #1771e6;
+}
+
+#facebook:hover {
+    background-color: #1771e6;
+    color: #fff;
+}
+
+#twitter {
+    color: #1c99e6;
+    border: 1px solid #1c99e6;
+}
+
+#twitter:hover {
+    background-color: #1c99e6;
+    color: #fff;
+}
+
+#instagram {
+    color: #cb2770;
+    border: 1px solid #cb2770;
+}
+
+#instagram:hover {
+    background-color: #cb2770;
+    color: #fff;
+}
+
+#whatsapp {
+    color: #2fe664;
+    border: 1px solid #2fe664;
+}
+
+#whatsapp:hover {
+    background-color: #2fe664;
+    color: #fff;
+}
+
+#telegram {
+    color: #0081c2;
+    border: 1px solid #0081c2;
+}
+
+#telegram:hover {
+    background-color: #0081c2;
+    color: #fff;
+}
+
+.active {
+    scale: 1;
+}
+
+.overlay {
+    background-color: #5f5f5f83;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.overlayActive {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+@media (max-width: 800px) {
+    .card-wrapper {
+        max-width: 250px;
+        width: 300px;
+    }
+
+    .btn-gp {
+        flex-direction: column;
+    }
+
+    .modal {
+        width: 70vw;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-wrapper {
+        position: static;
+        top: 0;
+        left: 0;
+        translate: 0 0;
+        margin: 0 12px;
+        padding: 0 10px;
+    }
+
+    .card-wrapper div img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .user-name h2 {
+        font-size: 1.3rem;
+    }
+
+    .modal {
+        width: 80vw;
+    }
+}

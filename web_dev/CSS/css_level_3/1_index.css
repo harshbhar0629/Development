@@ -1,0 +1,13 @@
+div{
+    background-color: pink;
+    color:darkgreen;
+    height: 150px;
+    width: 500px;
+    border: 2px dashed red;
+    /* border-left-colo#00ffffqua;
+    border-left-style: dotted ;
+    border-radius: 10px;
+    margin: 1px 2px 2px 2px;
+    padding: 0px 0px 3px 2px;
+     */
+}

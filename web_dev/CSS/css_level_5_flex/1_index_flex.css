@@ -1,0 +1,28 @@
+*{
+    text-align: center;
+}
+
+.container{
+    height: 400px;
+    width: 400px;
+    border: 2px solid black;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row; 
+    
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.container div{
+    border: 1px solid black;
+    height: 70px;
+    width: 70px;
+    color: white;
+}
+
+#change-align{
+    align-self: flex-start;
+    flex-basis: 100px;
+}

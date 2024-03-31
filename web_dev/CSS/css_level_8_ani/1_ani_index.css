@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.divi{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.btn{
+    font-size: 1.1rem;
+    color: white;
+    box-shadow: 3px 3px #0000003f;
+    background-color: #e84954;
+    padding: 0.8rem 2.3rem;
+    position: relative;
+    z-index: 1;
+}
+
+
+.btn::before{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    transform: scaleX(0);
+    content: "";
+    background-color: #1f1f1f;
+    transition: all 0.3s;
+    transform-origin: left;
+    z-index: -1;
+}
+
+.btn:hover::before{
+    transform: scaleX(1);
+}
+
+
+
+/* .container{
+    border: 1px solid black;
+    background-color: aqua;
+    height: 600px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+} */
+/* 
+.divi:hover{
+    transform: translateX(500px) scale(1.2) rotate(360deg);
+    background-color: blue; 
+
+    transition-duration: 2s;
+    transition-delay: 0.5s;
+    transition-timing-function: cubic-bezier(0, 1.28, 0.07,-0.37);
+} 
+*/
+/* 
+@keyframes transformed{
+    0%{
+        background-color: blue;
+        transform: translateX(0) scale(1);
+    }
+    50%{
+        transform: scale(2) rotate(180deg);
+        background-color: orange;
+    }
+    100%{
+        background-color: yellow;
+        transform: scale(0.5) translateX(700px) rotate(360deg);
+        
+    }
+}
+
+
+.divi{
+    animation-name: transformed;
+    animation-duration: 2s;
+    animation-iteration-count: 5;
+    animation-delay: 0.5s;
+    animation-direction: normal;
+
+    height: 200px;
+    width: 200px;
+    background-color: brown;
+    border: 2px solid black;
+} */
