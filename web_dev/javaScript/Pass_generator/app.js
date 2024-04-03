@@ -22,6 +22,7 @@ let password = "";
 let passLen = 10;
 let cntCheckBox = 1;
 handleSlider();
+setIndicator("#ccc");
 // set grey color
 
 /**
@@ -44,13 +45,19 @@ handleSlider();
 function handleSlider() {
     inputSlider.value = passLen;
     dataLen.innerHTML = passLen;
-    lowerCase.checked = true;
+    if (cntCheckBox > 0) {
+        lowerCase.checked = true;        
+    }
+    const min = inputSlider.min;
+    const max = inputSlider.max;
+    inputSlider.style.backgroundSize = ((passLen - min) * 100 / (max - min)) + "% 100%";
 }
 
 // set indicator
 function setIndicator(color) {
+    // console.log("color");
     indicator.style.backgroundColor = color;
-    // shadow 
+    indicator.style.boxShadow = `0px 0px 12px 1px ${color}`;
 }
 
 // get random values
@@ -92,7 +99,7 @@ function setColorStrength() {
 
     if (passLen >= 10 && hasSym == true && hasNum == true && (hasLower == true || hasUpper == true)) {
         // strong pass 
-        setIndicator("#0f0");
+        setIndicator("#f00");
     }
     else if ((hasSym == true || hasNum == true) && (hasLower == true || hasUpper == true) && passLen >= 6) {
         // moderate
@@ -100,7 +107,7 @@ function setColorStrength() {
     }
     else if ((hasSym == true || hasNum == true) || (hasLower == true || hasUpper == true)) {
         // easy if any attributes is not checked we can't generate any password
-        setIndicator("#f00");
+        setIndicator("#0f0");        
     }
 }
 
@@ -113,9 +120,8 @@ async function copyContent() {
     }
     copyMsg.classList.add("active");
     setTimeout(() => {
-        copyMsg.innerHTML = "";
         copyMsg.classList.remove("active");
-    }, 1500);
+    }, 2000);
 }
 
 inputSlider.addEventListener("input", (event) => {
@@ -173,6 +179,7 @@ symbol.addEventListener('click', () => {
 function generatePass() {
 
     let len = passLen;
+    let previous = -1;
     while (len > 0) {
         len--;
         let r = Math.floor(Math.random() * 4) ;
@@ -189,20 +196,24 @@ function generatePass() {
             password += generateRandomSymbol();
         }
         else {
-            if (symbol.checked) {
+            if (symbol.checked && previous != 1 || cntCheckBox == 1 || cntCheckBox == 4) {
                 password += generateRandomSymbol();
+                previous = 1;
             }
-            else if (number.checked) {
+            else if (number.checked && previous != 2 || cntCheckBox == 1 || cntCheckBox == 4) {
                 password += generateRandomInt();
+                previous = 2;
             }
-            else if (upperCase.checked) {
+            else if (upperCase.checked && previous != 3 || cntCheckBox == 1) {
                 password += generateRandomUppercase();
+                previous = 3;
             }
-            else if (lowerCase.checked) {
+            else if (lowerCase.checked && previous != 4 || cntCheckBox == 1) {
                 password += generateRandomLowercase();
+                previous = 4;
             }
         }
-        console.log(password);
+        // console.log(password);
     }
 }
 
@@ -213,7 +224,7 @@ generateBtn.addEventListener('click', () => {
     if (cntCheckBox > 0) {
         generatePass();
         passDisplay.value = password;
-        console.log(password);
+        // console.log(password);
     }
+    setColorStrength();
 });
-
