@@ -171,7 +171,7 @@ symbol.addEventListener('click', () => {
 });
 
 function generatePass() {
-    password = "";
+
     let len = passLen;
     while (len > 0) {
         len--;
@@ -208,13 +208,12 @@ function generatePass() {
 
 // main function 
 generateBtn.addEventListener('click', () => {
+    password = "";
+    passDisplay.value = password;
     if (cntCheckBox > 0) {
         generatePass();
         passDisplay.value = password;
         console.log(password);
-    }
-    else {
-        console.warn("Please select any checkbox for password");
     }
 });
 
