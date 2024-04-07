@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <h1>Weather App</h1>
+        <div class="tab-container">
+            <div class="tab" userWeather>Your Weather</div>
+            <div class="tab" searchWeather>Search Weather</div>
+        </div>
+        
+        <!-- hidden code 3-container show single container at a time -->
+        <div class="weather-container">
+            <!-- first grant location -->
+            <div class="grant-loc-cont">
+                <img src="./images/location.png" alt="Location-Image" width="80" height="80" loading="lazy">
+                <p>Grant Location Acess</p>
+                <p>Allow Acess To Get Weather Information</p>
+                <button>Grant Acess</button>
+            </div>
+
+            <!-- second container search container -->
+            <form class="form-cont" seach-cont>
+                <input type="text" placeholder="Search for city.." search-input>
+                <button class="btn">
+                    <img src="./images/search.png" alt="seach" width="20" height="20" loading="lazy">
+                </button>
+            </form>
+
+            <!-- loading screen -->
+            <div class="loading-cont">
+                <img src="./images/loading.gif" alt="loading.." width="150" height="150">
+                <p>Loading..</p>
+            </div>
+
+            <!-- Third conatiner user location container -->
+            <div class="container user-info-cont">
+                <!-- city name with their respective icon  -->
+                <div class="city-name">
+                    <p data-city-name></p>
+                    <img data-city-icon>
+                </div>
+
+                <!-- weather description -->
+                <p data-weatherDesc></p>
+                <!-- weather img with respect to their weather condition -->
+                <img data-weather-icon>
+                <!-- weather temp with respect to your i/p -->
+                <p data-temp></p>
+
+                <!-- totally based on api and i/p data -->
+                <div class="param-cont">
+                    <div class="parameter">
+                        <img src="./images/wind.png">
+                        <p>WindSpeed</p>
+                        <p data-windSpeed></p>
+                    </div>
+                    <div class="parameter">
+                        <img src="./images/humidity.png">
+                        <p>Humidity</p>
+                        <p data-humidity></p>
+                    </div>
+                    <div class="parameter">
+                        <img src="./images/cloud.png">
+                        <p>Clouds</p>
+                        <p data-clouds></p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
