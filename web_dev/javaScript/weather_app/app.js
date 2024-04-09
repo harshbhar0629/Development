@@ -2,8 +2,8 @@ const userTab = document.querySelector("[userWeather]");
 const searchTab = document.querySelector("[searchWeather]");
 const userCont = document.querySelector(".weather-container");
 const grantAccess = document.querySelector(".grant-loc-cont");
-const searchForm = document.querySelector(".form-cont");
-const loadingScr = document.querySelector(".grant-loc-cont");
+const searchForm = document.querySelector("[search-cont]");
+const loadingScr = document.querySelector(".loading-cont");
 const userInfoCont = document.querySelector(".user-info-cont");
 
 
@@ -11,8 +11,10 @@ const userInfoCont = document.querySelector(".user-info-cont");
 let currTab = userTab;
 const API_KEY = "d1845658f92b31c64bd94f06f7188c9c";
 currTab.classList.add("curr-tab");
+getWeatherFromStorage();
 
 function getWeatherFromStorage() {
+    loadingScr.classList.add("active");
     // it check coordinates are present in storage or not
     let localCord = sessionStorage.getItem("user-coordinates");
     if (!localCord) {
@@ -23,6 +25,7 @@ function getWeatherFromStorage() {
         const coordinates = JSON.parse(localCord);
         fetchUserWeatherInfo(coordinates);
     }
+    loadingScr.classList.remove("active");
 }
 
 async function fetchUserWeatherInfo(coord) {
@@ -37,12 +40,13 @@ async function fetchUserWeatherInfo(coord) {
         );
         
         const data = await res.json();
-        loadingScr.classList.remove("active");
         userInfoCont.classList.add("active");
         renderWeatherInfo(data);// it takes values from passing data and put value in your UI
+        loadingScr.classList.remove("active");
     }
     catch(err) {
-        console.error("Something Went Wrong");
+        // console.error("Something Went Wrong");
+        alert("Something Went Wrong");
         loadingScr.classList.remove("active");
     }
 }
@@ -57,12 +61,16 @@ function renderWeatherInfo(data) {
     const wind = document.querySelector("[data-windSpeed]");
     const humidity = document.querySelector("[data-humidity]");
     const clouds = document.querySelector("[data-clouds]");
-
+    if (data?.name == undefined || data?.main?.temp == undefined) {
+        alert("Something Went Wrong:)");
+        alert("Please enter correct name:)");
+        return;
+    }
     // put all values 
     cityName.innerHTML = data?.name;
     //use api for finding flag
     countryIcon.src = `https://flagcdn.com/144x108/${data?.sys?.country.toLowerCase()}.png`;
-    weatherDesc.innerHTML = data?.weather?.[0]?.description;
+    weatherDesc.innerHTML = data?.weather?.[0]?.main;
     //use api for finding weather
     weatherImg.src = `http://openweathermap.org/img/w/${data?.weather?.[0]?.icon}.png`;
     tempData.innerText = `${data?.main?.temp.toFixed(2)} °C`;
@@ -77,6 +85,7 @@ function renderWeatherInfo(data) {
 function switchTab(inputTab) {
     if (currTab != inputTab) {
         // means tab switch
+        
         currTab.classList.remove("curr-tab");
         currTab = inputTab;
         currTab.classList.add("curr-tab");
@@ -125,7 +134,9 @@ function getLocation() {
 
 const grantBtn = document.querySelector(".grant-btn");
 grantBtn.addEventListener("click", () => {
-    getLocation(); 
+    loadingScr.classList.add("active");
+    getLocation();
+    loadingScr.classList.remove("active");
 });
 
 async function fetchSearchWeatherInfo(city) {
@@ -142,18 +153,19 @@ async function fetchSearchWeatherInfo(city) {
         userInfoCont.classList.add("active");
         renderWeatherInfo(data);
     }
-    catch(err) {
-        alert("Something Went Wrong")
+    catch (err) {
+        // console.log("error");
+        alert("Something Went Wrong");
     }
     loadingScr.classList.remove("active");
 }
 
 
-const searchInp = document.querySelector("[search-cont]");
+const searchInp = document.querySelector("[search-input]");
 searchForm.addEventListener("submit", (val) => {
     val.preventDefault();
-    console.log("yes");
-    let cityName = searchInp.value;
+    // console.log("yes");
+    const cityName = searchInp.value;
     if (cityName === "") {
         return;
     }
