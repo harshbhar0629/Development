@@ -1,4 +1,3 @@
-//Variables
 const searchbar = document.querySelector(".searchbar-container");
 const profilecontainer = document.querySelector(".profile-container");
 const root = document.documentElement.style;
@@ -158,7 +157,6 @@ function lightModeProperties() {
     darkMode = false;
     localStorage.setItem("dark-mode", false);
 }
-
 profilecontainer.classList.toggle("active");
 searchbar.classList.toggle("active");
 getUserData(url + "harshbhar0629");

@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", 'sans-serif';
+}
+
+.wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("./gradient-bg.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.wrapper p {
+    position: absolute;
+    top: 6.5%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 1rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 0.5rem 3rem;
+    font-weight: 600;
+    transition: all 1s ease-in-out;
+}
+
+.tic-tac-toe {
+    position: fixed;
+    width: 90%;
+    max-width: 20rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    aspect-ratio: 1/1;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.box {
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6 {
+    border-bottom: 2px solid white;
+}
+
+.box1,
+.box2,
+.box4,
+.box5,
+.box7,
+.box8 {
+    border-right: 2px solid white;
+}
+
+.btn {
+
+    all: unset;
+    color: rgb(233, 223, 223);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.15);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    position: absolute;
+    bottom: 7%;
+    border-radius: 10px;
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn.active {
+    display: flex;
+}
+
+.win {
+    transition: all 0.5s ease-in-out;
+    background-color: rgb(71, 116, 5);
+}
+
+.removeCursor {
+    cursor: default;
+}
