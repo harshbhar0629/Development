@@ -1,6 +1,7 @@
 const player = document.querySelector("[game-info]");
 let boxes = document.querySelectorAll(".box");
 const newGameBtn = document.querySelector(".btn");
+let isWinnerDeclare = false;
 
 const winnigPos = [
     [0, 1, 2],
@@ -29,6 +30,7 @@ function intialize() {
         box.classList.remove("win");
     }
     newGameBtn.classList.remove("active");
+    isWinnerDeclare = false;
 }
 
 function handleClick(idx) {
@@ -65,6 +67,8 @@ function declareWin(name, seq) {
         boxes[seq[i]].classList.add("win");
     }
     newGameBtn.classList.add("active");
+    isWinnerDeclare = true;
+    // intialize();
 }
 
 newGameBtn.addEventListener("click", () => {
@@ -85,10 +89,12 @@ function checkWin() {
                 y++;
             }
         }
+        let flag = false;
         if (x === 3) {
+            flag = true;
             declareWin("X", seqX);
         }
-        if (y === 3) {
+        if (flag === false && y === 3) {
             declareWin("Y", seqY);
         }
         seqX = [];
@@ -99,7 +105,9 @@ function checkWin() {
 boxes.forEach((box, idx) => {
     box.addEventListener("click", () => {
         // console.log( idx);
-        handleClick(idx);
+        if (isWinnerDeclare === false) {
+            handleClick(idx);
+        }
     });
 });
 
