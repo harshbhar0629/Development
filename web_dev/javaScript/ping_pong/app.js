@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // if(ball.offsetLeft <= 5)
         //     console.log(ball.offsetLeft)
 
-        if(ball)
+        // if(ball)
 
 
     }, 5);
