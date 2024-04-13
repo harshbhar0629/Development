@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+   
+    let paddle = document.getElementById("paddle");
     let ball = document.getElementById("ball"); // targetting ball
     let table = document.getElementById("ping-pong-table");
+
+    //handle the movement of ball in this game
 
     // here ballX and ballY helping us to set the starting position of ball w.r.t ping pong table
     let ballX = 50; // distance of the left of the ball w.r.t ping-pong-table 
@@ -28,23 +32,31 @@ document.addEventListener("DOMContentLoaded", () => {
             dy *= -1; // change direction of ball in y-direction
         }
 
+        // detect the collision between the paddle and ball
+        
+        // if(ball.offsetLeft <= 5)
+        //     console.log(ball.offsetLeft)
+
+        if(ball)
+
 
     }, 5);
 
 
-    let paddle = document.getElementById("paddle");
+    // handle the paddle in this ping-pong-game
     let paddleY = 0;
     let dPy = 10; //displacement for paddle in y-direction    
 
     document.addEventListener("keydown", (event) => {
         // console.log(event);
+        // event.preventDefault(); // it prevents the execution of default event behaviour
 
         if (event.key == "ArrowUp" && paddleY>0) {
             // up-arrow-key 
             // console.log("up");
             paddleY -= dPy;
         }
-        else if (event.key == "ArrowDown" && paddleY<table.offsetHeight - paddle.offsetHeight - 11) {
+        else if (event.key == "ArrowDown" && paddleY<table.offsetHeight - paddle.offsetHeight - 10) {
             // down-arrow-key 
             // console.log("Down");
             paddleY += dPy;
