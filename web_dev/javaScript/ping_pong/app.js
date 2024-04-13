@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(function exe() {
         ballX += dx;
         ball.style.left = `${ballX}px`;
-        
+
         // offsetWidth is nothing but it gives the width of current table
-        if (ballX > table.offsetWidth - ball.offsetWidth-2 || ballX<=0) {
+        if (ballX > table.offsetWidth - ball.offsetWidth - 2 || ballX <= 0) {
             dx *= -1; // change direction of ball in x-direction
         }
 
@@ -24,11 +24,34 @@ document.addEventListener("DOMContentLoaded", () => {
         ball.style.top = `${ballY}px`;
 
         // offsetHeight is nothing but it gives the height of current table
-        if (ballY > table.offsetHeight-ball.offsetHeight-2 || ballY <= 0) {
+        if (ballY > table.offsetHeight - ball.offsetHeight - 2 || ballY <= 0) {
             dy *= -1; // change direction of ball in y-direction
         }
 
 
     }, 5);
+
+
+    let paddle = document.getElementById("paddle");
+    let paddleY = 0;
+    let dPy = 10; //displacement for paddle in y-direction    
+
+    document.addEventListener("keydown", (event) => {
+        // console.log(event);
+
+        if (event.key == "ArrowUp" && paddleY>0) {
+            // up-arrow-key 
+            // console.log("up");
+            paddleY -= dPy;
+        }
+        else if (event.key == "ArrowDown" && paddleY<table.offsetHeight - paddle.offsetHeight - 11) {
+            // down-arrow-key 
+            // console.log("Down");
+            paddleY += dPy;
+        }
+
+        paddle.style.top = `${paddleY}px`;
+    });
+
 });
 
