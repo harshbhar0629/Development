@@ -33,4 +33,3 @@ sleep(2000).then(() => {
 
 Follow Up Question: Can we make a blocking version of sleep as well ?
 
-JS_Interview_Questions/Problem1.md at main · singhsanket143/JS_Interview_Questions 
