@@ -18,29 +18,37 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(function exe() {
         ballX += dx;
         ball.style.left = `${ballX}px`;
+        ballY += dy;
+        ball.style.top = `${ballY}px`;
+
+        // detect the collision between the paddle and ball
+        /**
+         * ballX < paddle.offsetLeft + paddle.offsetWidth -> this compare left(w.r.t table of ball) < right(W.r.t tbale of paddle)
+         * 
+         * (ballY - ball.offsetHeight > paddle.offsetTop) -> if(top of ball w.r.t table is > top of paddle w.r.t table)
+         * 
+         * (ballY - ball.offsetHeight < paddle.offsetTop + paddle.offsetHeight) -> if(ball is less than equal to bottom of paddle w.r.t table when it collides properly)
+         * 
+        */
+        if (ballX < paddle.offsetLeft + paddle.offsetWidth &&
+            ballY > paddle.offsetTop && ballY - ball.offsetHeight < paddle.offsetTop + paddle.offsetHeight
+        ) {
+            dx *= -1;
+        }
+
 
         // offsetWidth is nothing but it gives the width of current table
         if (ballX > table.offsetWidth - ball.offsetWidth - 2 || ballX <= 0) {
             dx *= -1; // change direction of ball in x-direction
         }
-
-        ballY += dy;
-        ball.style.top = `${ballY}px`;
-
+        
         // offsetHeight is nothing but it gives the height of current table
         if (ballY > table.offsetHeight - ball.offsetHeight - 2 || ballY <= 0) {
             dy *= -1; // change direction of ball in y-direction
-        }
-
-        // detect the collision between the paddle and ball
+        }        
         
-        // if(ball.offsetLeft <= 5)
-        //     console.log(ball.offsetLeft)
-
-        // if(ball)
-
-
-    }, 5);
+        // if(ballX < 5) console.log("left");
+    }, 10);
 
 
     // handle the paddle in this ping-pong-game
