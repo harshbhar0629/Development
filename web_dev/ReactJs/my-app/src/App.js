@@ -1,25 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import SoapItems  from './components/item';
 
 function App() {
   return (
+    // only single parent exist, we can't return multiple components at same time
     <div className="App">
-      Hello Harsh!
-    
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+      <div >
+        Hello Harsh!
+        <p>Can You buy!!</p>
+      </div>
+      <SoapItems></SoapItems>
     </div>
   );
 }
