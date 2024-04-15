@@ -12,15 +12,16 @@ function App() {
         <div className="soap-item">
             <p>SoapItems:</p>
           <div className="items">
-            <SoapItems name="Nirma"></SoapItems>
+            {/* how can i print text in b/w of custom items we can handle this stuff using property.child */}
+            <SoapItems name="Nirma">M hu first item</SoapItems>
             <ItemPrice price="150"></ItemPrice>
           </div>
           <div className="items">
-            <SoapItems name="SurfExcel"></SoapItems>
+            <SoapItems name="SurfExcel">M hu second item</SoapItems>
             <ItemPrice price="250"></ItemPrice>
           </div>
           <div className="items">
-            <SoapItems name="555"></SoapItems>
+            <SoapItems name="555">M hu third item</SoapItems>
             <ItemPrice price="125"></ItemPrice>
           </div>          
         </div>
