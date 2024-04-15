@@ -1,7 +1,8 @@
 import './item.css'
-function SoapItems() {
+function SoapItems(props) {
+    let name = props.name;
     return (
-        <p className="nirma">Nirma</p>
+        <p className="nirma">{name}</p>
     );
 }
 

@@ -1,8 +1,8 @@
-import './ItemPrice'
+import './ItemPrice.css'
 
-function ItemPrice() {
-    const price = 100;
-    return (<p>{price}</p>);
+function ItemPrice(props) {
+    const price = props.price;
+    return (<p className="price">{price}</p>);
 }
 
 export default ItemPrice;

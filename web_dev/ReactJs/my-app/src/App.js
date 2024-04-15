@@ -9,11 +9,23 @@ function App() {
     <div className="App">
       <div >
         Hello Harsh!
-        <p>SoapItems:</p>
+        <div className="soap-item">
+            <p>SoapItems:</p>
+          <div className="items">
+            <SoapItems name="Nirma"></SoapItems>
+            <ItemPrice price="150"></ItemPrice>
+          </div>
+          <div className="items">
+            <SoapItems name="SurfExcel"></SoapItems>
+            <ItemPrice price="250"></ItemPrice>
+          </div>
+          <div className="items">
+            <SoapItems name="555"></SoapItems>
+            <ItemPrice price="125"></ItemPrice>
+          </div>          
+        </div>
       </div>
-      <SoapItems></SoapItems>
-      <ItemPrice></ItemPrice>
-      <p>Can you buy..?</p>
+      
     </div>
   );
 }
