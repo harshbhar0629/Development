@@ -1,6 +1,7 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import SoapItems  from './components/item';
+import SoapItems from './components/item';
+import ItemPrice from './components/ItemPrice';
 
 function App() {
   return (
@@ -8,9 +9,11 @@ function App() {
     <div className="App">
       <div >
         Hello Harsh!
-        <p>Can You buy!!</p>
+        <p>SoapItems:</p>
       </div>
       <SoapItems></SoapItems>
+      <ItemPrice></ItemPrice>
+      <p>Can you buy..?</p>
     </div>
   );
 }
