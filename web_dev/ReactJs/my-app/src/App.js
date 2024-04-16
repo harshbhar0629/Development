@@ -5,6 +5,7 @@ import './App.css';
 
 import ItemName from './components2/ItemName'
 import ItemDate from './components2/ItemDate'
+import Button from './components2/Button';
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
           <ItemDate date="11" month="July" year="2021"></ItemDate>
           <ItemName name="Maggie"></ItemName>
       </div>
+
+      <Button text="Submit"></Button>
     </div>
 
 
