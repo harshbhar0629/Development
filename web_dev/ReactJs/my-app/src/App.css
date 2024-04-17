@@ -2,7 +2,7 @@
   text-align: center;
   background-color: yellow;
   width: 500px;
-  height: 470px;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -10,6 +10,7 @@
   margin: 0 auto;
   border-radius: 10px;
   margin-top: 50px;
+  padding-bottom: 20px;
 }
 
 .items{
@@ -20,8 +21,14 @@
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   background-color: aqua;
   border-radius: 10px;
+}
+
+.New-Pdt{
+  width: 80%;
 }
 
 /* .App {

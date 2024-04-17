@@ -6,6 +6,7 @@ import './App.css';
 import ItemName from './components2/ItemName'
 import ItemDate from './components2/ItemDate'
 import Button from './components2/Button';
+import NewProduct from './components2/NewProduct'
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
 
     <div className="App">
       <h1>Hello Harsh!!</h1>
+      <NewProduct className="New-Pdt"></NewProduct>
+
       <div className="items">
         <ItemDate date="21" month="September" year="2021"></ItemDate>
         <ItemName name="Nirma"></ItemName>
@@ -35,7 +38,8 @@ function App() {
         <Button text="Add To Cart"></Button>
       </div>
 
-      <Button text="Submit"></Button>
+      {/* <Button text="Submit"></Button> */}
+
     </div>
 
 
