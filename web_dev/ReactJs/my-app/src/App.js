@@ -9,13 +9,18 @@ import Button from './components2/Button';
 import NewProduct from './components2/NewProduct'
 
 function App() {
+
+  function printPdtData(data) {
+    console.log(data)
+  }
+
   return (
 
     // new code 
-
+ 
     <div className="App">
       <h1>Hello Harsh!!</h1>
-      <NewProduct className="New-Pdt"></NewProduct>
+      <NewProduct className="New-Pdt" printData={printPdtData}></NewProduct>
 
       <div className="items">
         <ItemDate date="21" month="September" year="2021"></ItemDate>
