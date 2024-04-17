@@ -3,19 +3,36 @@ import { useState } from 'react';
 
 function Product() {
 
-    let [title, setTitle] = useState('');
-    let [date, setDate] = useState('');
+    // handling multi state at a time 
+    let [pdt, setPdt] = useState({
+        title: '',
+        date: ''
+    });
+    
 
-    function newItemHandler(event) {
-        setTitle(event.target.value);
-        console.log(event.target.value);
+
+    // let [title, setTitle] = useState('');
+    // let [date, setDate] = useState('');
+    //  single function handle single state
+    function newItemHandler(event, prev) {
+        let obj = { ...prev, title: event.target.value };
+        console.log(obj);
+        return obj;
+        // setTitle(event.target.value);
+        // console.log(event.target.value);
     }
 
-    function dateHandler(event) {
-        setDate(event.target.value);
-        console.log(event.target.value);
-        console.log(event)
+    function dateHandler(event, prev) {
+        let obj = { ...prev, date: event.target.value };
+        console.log(obj);
+        return obj;
+        // setDate(event.target.value);
+        // console.log(event.target.value);
+        // console.log(event);
+        // console.log(date);
+        // console.log(title);
     }
+
 
     return (
         <form className='form'>
