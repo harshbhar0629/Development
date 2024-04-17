@@ -17,18 +17,22 @@ function App() {
       <div className="items">
         <ItemDate date="21" month="September" year="2021"></ItemDate>
         <ItemName name="Nirma"></ItemName>
+        <Button text="Add To Cart"></Button>
       </div>
       <div className="items">
         <ItemDate date="20" month="October" year="2021"></ItemDate>
         <ItemName name="Surf-Excel"></ItemName>
+        <Button text="Add To Cart"></Button>
       </div>
       <div className="items">
         <ItemDate date="01" month="June" year="2021"></ItemDate>
         <ItemName name="Tide"></ItemName>
+        <Button text="Add To Cart"></Button>
       </div>
       <div className="items">
           <ItemDate date="11" month="July" year="2021"></ItemDate>
-          <ItemName name="Maggie"></ItemName>
+        <ItemName name="Maggie"></ItemName>
+        <Button text="Add To Cart"></Button>
       </div>
 
       <Button text="Submit"></Button>
