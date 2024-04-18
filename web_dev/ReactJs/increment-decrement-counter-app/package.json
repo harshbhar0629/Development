@@ -10,11 +10,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thepranaygupta/react-tailwind-css-starter-pack.git"
+    "url": "git+https://github.com/harshbhar0629/increment-decrement-counter-app"
   },
-  "author": "Pranay Gupta",
+  "author": "Harsh Bhardwaj",
   "bugs": {
-    "url": "https://github.com/thepranaygupta/react-tailwind-css-starter-pack/issues"
+    "url": "git+https://github.com/harshbhar0629/increment-decrement-counter-app"
   },
   "scripts": {
     "start": "react-scripts start",
