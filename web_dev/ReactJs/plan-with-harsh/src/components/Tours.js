@@ -1,17 +1,18 @@
-import './Tours.css'
 import Card from './Card';
 
 function Tours(props) {
     return (
-        <div>
+        <div className='container'>
             <div>
-                <h2>Plan With Love</h2>
+                <h2 className='heading'>Plan With Harsh!</h2>
             </div>
-            <div>
+            <div className='card'>
+                {/* tours.map it go every tour and return card for it this is just like for each loop we don't have to create again and again card */}
                 {
                     props.tours.map((tour) => {
+                        {/* {...tour} means it creates copy of every tour and passed as arguement */}
                         return (
-                            <Card></Card>
+                            <Card {...tour} removeTour={props.removeTour}></Card>
                         );
                     })
                 }
