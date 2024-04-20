@@ -6,7 +6,7 @@ function Tours(props) {
             <div>
                 <h2 className='heading'>Plan With Harsh!</h2>
             </div>
-            <div className='card'>
+            <div className='cards'>
                 {/* tours.map it go every tour and return card for it this is just like for each loop we don't have to create again and again card */}
                 {
                     props.tours.map((tour) => {
