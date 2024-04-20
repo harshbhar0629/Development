@@ -12,7 +12,7 @@ function Tours(props) {
                     props.tours.map((tour) => {
                         {/* {...tour} means it creates copy of every tour and passed as arguement */}
                         return (
-                            <Card {...tour} removeTour={props.removeTour}></Card>
+                            <Card key={tour.id} {...tour} removeTour={props.removeTour}></Card>
                         );
                     })
                 }
