@@ -1,45 +1,62 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-.container{
-    border: 1px solid black;
-    height: 100vh;
-    width: 100vw;
+body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: antiquewhite;
+    text-align: center;
 }
 
-.arena-region{
-    height: 70%;
-    width: 60%;
-    border: 5px solid #1ba000;
-    background-color: #6de769;
+#game-arena {
+    width: 800px;
+    height: 600px;
+    background-color: #333;
+    position: relative;
+    border: 5px solid #666;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.score{
-    margin-left: 53%;
-    font-size: 2rem;
-    font-weight: bolder;
+#score-board {
+    font-size: x-large;
+    font-weight: bold;
     color: black;
+    margin: 10px 0;
 }
 
-.btn{
-    all: unset;
-    background-color: rgb(35, 241, 35);
+.start-button {
+    background-color: orangered;
     color: white;
-    font-size: 20px;
-    padding: 15px 60px;
-    margin: 20px 0px;
-    border-radius: 10px;
-    border: 2px solid green;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 4px 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
 }
 
-.btn:hover{
-    background-color: rgb(11, 196, 11);
-    border: 3px solid green;
+.food {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    border-radius: 50%;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.snake {
+    width: 20px;
+    height: 20px;
+    background-color: chartreuse;
+    position: absolute;
+    border-radius: 5px;
 }
