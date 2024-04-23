@@ -1,9 +1,20 @@
-import React from 'react'
+/** @format */
 
-function Card() {
-  return (
-    <div></div>
-  )
+import React from "react";
+
+function Card({ courses }) {
+	return (
+		<div>
+			<div>
+        <img src={courses.image.url}></img>
+        <div>
+          <button>
+            
+          </button>
+        </div>
+			</div>
+		</div>
+	);
 }
 
-export default Card
+export default Card;

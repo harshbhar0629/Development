@@ -8,13 +8,14 @@ import { apiUrl, filterData } from "./data";
 
 const App = () => {
 
-	const [courses, setCourses] = useState("")
+	const [courses, setCourses] = useState(null)
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
 				const res = await fetch(apiUrl);
-				const output = res.json();
+				const output = await res.json();
 				setCourses(output.data);
+				console.log(output.data);
 			}
 			catch (err) {
 				console.error("Something went wrong");
@@ -27,7 +28,7 @@ const App = () => {
 		<div className="wrapper">
 			<Navbar></Navbar>
 			<Filter filterData={filterData}></Filter>
-			<Cards></Cards>
+			<Cards courses={courses}></Cards>
 		</div>
 	);
 };

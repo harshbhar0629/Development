@@ -7,7 +7,7 @@ const Filter = ({ filterData }) => {
         <div>
             {
                 filterData.map((data) => {
-                    return <button>{data.title}</button>
+                    return <button>{data.title} key={ data.id}</button>
                 })
             }
         </div>
