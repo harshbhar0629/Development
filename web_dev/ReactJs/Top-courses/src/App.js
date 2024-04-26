@@ -5,10 +5,11 @@ import Navbar from "./component/Navbar";
 import Filter from "./component/Filter";
 import Cards from "./component/Cards";
 import { apiUrl, filterData } from "./data";
+// import {toast} from "react-toastify"
 
 const App = () => {
 
-	const [courses, setCourses] = useState(null)
+	const [courses, setCourses] = useState("")
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
@@ -18,6 +19,7 @@ const App = () => {
 				console.log(output.data);
 			}
 			catch (err) {
+				// toast.error("something went wrong");
 				console.error("Something went wrong");
 			}
 		}

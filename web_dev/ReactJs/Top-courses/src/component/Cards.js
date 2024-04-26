@@ -3,7 +3,7 @@
 import React from "react";
 import Card from "./Card";
 
-function Cards({courses}) {
+function Cards({ courses }) {
 	let allCourses = [];
 	const getCourses = () => {
 		Object.values(courses).forEach((courseCategory) => {
@@ -16,11 +16,9 @@ function Cards({courses}) {
 
 	return (
 		<div>
-      {
-        getCourses().map((course) => {
-			  	<Card course={course}></Card>;
-        })
-      }
+			{getCourses().map((course) => {
+				<Card course={course}></Card>;
+			})}
 		</div>
 	);
 }
